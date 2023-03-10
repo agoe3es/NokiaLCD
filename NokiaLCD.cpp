@@ -21,10 +21,10 @@
 #include "NokiaLCD.h"
 
 /* Define LCD6610 PinIO interface */
-#define BL    2      // Digital 2 --> BL
+
 #define CS    3      // Digital 3 --> #CS
 #define CLK   4      // Digital 4 --> SCLK
-#define SDA   5      // Digital 5 --> SDATA
+#define SDAT   5      // Digital 5 --> SDATA
 #define RESET 6      // Digital 6 --> #RESET
 
 /* Start of Define Philips(NXP):PCF8833 Header */ 
@@ -121,12 +121,11 @@
 #define CS1 sbi(PORTD,CS);
 #define CLK0 cbi(PORTD,CLK);
 #define CLK1 sbi(PORTD,CLK);
-#define SDA0 cbi(PORTD,SDA);
-#define SDA1 sbi(PORTD,SDA);
+#define SDA0 cbi(PORTD,SDAT);
+#define SDA1 sbi(PORTD,SDAT);
 #define RESET0 cbi(PORTD,RESET);
 #define RESET1 sbi(PORTD,RESET);
-#define BL0 cbi(PORTD,BL);
-#define BL1 sbi(PORTD,BL);
+
 /* End of Define Philips(NXP):PCF8833 Header */ 
 
 const unsigned char FONT6x8[] PROGMEM = {

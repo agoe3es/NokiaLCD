@@ -23,7 +23,7 @@
   the setCircle, SetLine, and PutStr functions of the Color LCD
   Shield Library.
 */
-#include "NokiaLCD.h"
+#include <NokiaLCD.h>
 
 // Enter the time below in 12-hr format
 #define HOURS 10

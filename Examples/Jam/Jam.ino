@@ -128,21 +128,21 @@ void printTime(int h,int m,int s)
  char detik[4];
  if (second() < 10)
   {
-    sprintf(detik,":0%1d",second());
+    sprintf(detik,"0%1d",second());
   }
   else
   {
-    sprintf(detik, ":%2d",second());
+    sprintf(detik, "%2d",second());
   }
   lcd.LCDPutStr(detik,10,50,besar,orange,putih);
   char menit[4];
   if (minute() < 10)
   {
-    sprintf(menit, "0%1d", minute());
+    sprintf(menit, "0%1d:", minute());
   }
   else
   {
-    sprintf(menit, "%2d", minute());
+    sprintf(menit, "%2d:", minute());
   }
   lcd.LCDPutStr(menit,10,26,besar,maroon,putih);
   char jam[4];
